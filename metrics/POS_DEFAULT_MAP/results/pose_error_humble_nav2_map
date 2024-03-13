@@ -1,0 +1,53 @@
+[INFO] [1710310564.617256263] [pose_error_calculator]: Sending goal 0 with position (x: 1.8552, y: 0.9405)
+[INFO] [1710310566.462078848] [pose_error_calculator]: Goal accepted
+[INFO] [1710310590.224373669] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310590.226493357] [pose_error_calculator]: Robot's Current Pose: Position(x: 1.7467769922825704, y: 0.7472152427732582, z: 0.010001474397903666), Orientation(x: 0.0002223491532483574, y: 8.254777735410766e-05, z: 0.11302405636159302, w: 0.9935922234147618)
+[INFO] [1710310590.227248410] [pose_error_calculator]: Positional Error: 0.2216, Orientation Error: 0.2265
+[INFO] [1710310593.229523731] [pose_error_calculator]: Sending goal 1 with position (x: 1.7535, y: -0.2394)
+[INFO] [1710310593.236126056] [pose_error_calculator]: Goal accepted
+[INFO] [1710310604.407793469] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310604.409499577] [pose_error_calculator]: Robot's Current Pose: Position(x: 1.862680841482092, y: -0.04280294357256672, z: 0.009997592504951615), Orientation(x: -0.0002318839998057855, y: 5.421721605343985e-05, z: -0.10762284776831632, w: 0.9941917651683412)
+[INFO] [1710310604.411395117] [pose_error_calculator]: Positional Error: 0.2249, Orientation Error: 0.2157
+[INFO] [1710310607.414160224] [pose_error_calculator]: Sending goal 2 with position (x: 1.4214, y: -1.5226)
+[INFO] [1710310607.418692572] [pose_error_calculator]: Goal accepted
+[INFO] [1710310618.691699194] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310618.693483903] [pose_error_calculator]: Robot's Current Pose: Position(x: 1.5475654998450288, y: -1.3357664472373751, z: 0.009995060433743923), Orientation(x: -0.0002875700670870007, y: 8.554391334831169e-05, z: -0.13533226242238736, w: 0.9908002264499809)
+[INFO] [1710310618.694521000] [pose_error_calculator]: Positional Error: 0.2255, Orientation Error: 0.2715
+[INFO] [1710310621.696829942] [pose_error_calculator]: Sending goal 3 with position (x: 0.5537, y: -1.2509)
+[INFO] [1710310621.701969165] [pose_error_calculator]: Goal accepted
+[INFO] [1710310633.425327308] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310633.426074154] [pose_error_calculator]: Robot's Current Pose: Position(x: 0.618222349899992, y: -1.4311001198645323, z: 0.010007204082315934), Orientation(x: 0.0002557380945986343, y: 7.415159082691212e-05, z: 0.12000833380598822, w: 0.9927728485996578)
+[INFO] [1710310633.427526810] [pose_error_calculator]: Positional Error: 0.1914, Orientation Error: 0.2406
+[INFO] [1710310636.429736311] [pose_error_calculator]: Sending goal 4 with position (x: 0.4358, y: 0.4554)
+[INFO] [1710310636.436860782] [pose_error_calculator]: Goal accepted
+[INFO] [1710310649.712646271] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310649.714613346] [pose_error_calculator]: Robot's Current Pose: Position(x: 0.4616148466997284, y: 0.25676541623936916, z: 0.010006244089546564), Orientation(x: 0.000228085091839129, y: 7.050722631351762e-05, z: 0.11906228840765697, w: 0.9928867581376306)
+[INFO] [1710310649.717389646] [pose_error_calculator]: Positional Error: 0.2003, Orientation Error: 0.2387
+[INFO] [1710310652.720758536] [pose_error_calculator]: Sending goal 5 with position (x: -0.1952, y: 1.8786)
+[INFO] [1710310652.727490460] [pose_error_calculator]: Goal accepted
+[INFO] [1710310679.058620924] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310679.060079714] [pose_error_calculator]: Robot's Current Pose: Position(x: 0.03514445241890068, y: 1.8224151749620796, z: 0.010001247666696573), Orientation(x: -0.0001675138321506446, y: 4.7303306448011e-05, z: -0.140880210982508, w: 0.9900266339119556)
+[INFO] [1710310679.062930521] [pose_error_calculator]: Positional Error: 0.2371, Orientation Error: 0.2827
+[INFO] [1710310682.065543112] [pose_error_calculator]: Sending goal 6 with position (x: -1.2792, y: -0.5348)
+[INFO] [1710310682.071688875] [pose_error_calculator]: Goal accepted
+[INFO] [1710310701.944658241] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310701.947921425] [pose_error_calculator]: Robot's Current Pose: Position(x: -1.0831055862692873, y: -0.5340151563529457, z: 0.010004793810078422), Orientation(x: -0.00027802920578324836, y: 8.120434167513068e-05, z: -0.11350987084277599, w: 0.993536826356664)
+[INFO] [1710310701.949721284] [pose_error_calculator]: Positional Error: 0.1961, Orientation Error: 0.2275
+[INFO] [1710310704.952482676] [pose_error_calculator]: Sending goal 7 with position (x: -2.4063, y: -0.0063)
+[INFO] [1710310704.958013477] [pose_error_calculator]: Goal accepted
+[INFO] [1710310719.179424958] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310719.181252784] [pose_error_calculator]: Robot's Current Pose: Position(x: -2.2260967364769826, y: -0.09470259230152679, z: 0.010003488430410724), Orientation(x: 0.0002012388632096899, y: 5.5638884549214425e-05, z: 0.12306596749587895, w: 0.9923984703996362)
+[INFO] [1710310719.182061563] [pose_error_calculator]: Positional Error: 0.2007, Orientation Error: 0.2468
+[INFO] [1710310722.184383385] [pose_error_calculator]: Sending goal 8 with position (x: -1.2039, y: 0.5485)
+[INFO] [1710310722.190926977] [pose_error_calculator]: Goal accepted
+[INFO] [1710310728.161881154] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310728.162812652] [pose_error_calculator]: Robot's Current Pose: Position(x: -1.42037809893804, y: 0.4705980731892718, z: 0.010263134471724188), Orientation(x: 0.00019389947879864256, y: 0.00017782468438869682, z: 0.12881567430522314, w: 0.9916685196347943)
+[INFO] [1710310728.165619930] [pose_error_calculator]: Positional Error: 0.2301, Orientation Error: 0.2583
+[INFO] [1710310731.168074901] [pose_error_calculator]: Sending goal 9 with position (x: -1.7142, y: -1.4709)
+[INFO] [1710310731.177686460] [pose_error_calculator]: Goal accepted
+[INFO] [1710310744.994874855] [pose_error_calculator]: Goal reached, calculating pose error...
+[INFO] [1710310744.998943376] [pose_error_calculator]: Robot's Current Pose: Position(x: -1.7141459373783945, y: -1.2694037060895706, z: 0.010006704918869302), Orientation(x: -0.0002593134052819771, y: 8.748314943060076e-05, z: -0.13100320941757304, w: 0.9913819063436411)
+[INFO] [1710310745.000963544] [pose_error_calculator]: Positional Error: 0.2015, Orientation Error: 0.2628
+[INFO] [1710310748.005212503] [pose_error_calculator]: All goals have been processed.
+[INFO] [1710310748.006295580] [pose_error_calculator]: Positional Error - Average: 0.2129, Minimum: 0.1914, Maximum: 0.2371
+[INFO] [1710310748.006793964] [pose_error_calculator]: Orientation Error - Average: 0.2471, Minimum: 0.2157, Maximum: 0.2827
