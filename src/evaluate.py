@@ -21,6 +21,8 @@ class PoseErrorCalculator(Node):
         self.goal_poses = self.initialize_goal_poses()
         self.goal_pose = None
         self.current_goal_index = 0
+        self.positional_errors = []
+        self.orientation_errors = []
 
     def initialize_goal_poses(self):
         # Define the goal poses as provided
@@ -54,11 +56,16 @@ class PoseErrorCalculator(Node):
             self.current_goal_index += 1
         else:
             self.get_logger().info('All goals have been processed.')
+            self.log_error_statistics()
 
     def send_goal_and_wait(self, goal_pose):
         self.goal_pose = goal_pose  # Set the current goal pose
         goal_msg = NavigateToPose.Goal()
         goal_msg.pose = goal_pose
+
+        # Log the goal position and index when the goal is accepted
+        goal_position = goal_pose.pose.position
+        self.get_logger().info(f'Sending goal {self.current_goal_index} with position (x: {goal_position.x:.4f}, y: {goal_position.y:.4f})')
 
         self.action_client.wait_for_server()
         send_goal_future = self.action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback)
@@ -101,6 +108,9 @@ class PoseErrorCalculator(Node):
             actual_position = trans.transform.translation
             actual_orientation = trans.transform.rotation
 
+            self.get_logger().info(f"Robot's Current Pose: Position(x: {actual_position.x}, y: {actual_position.y}, z: {actual_position.z}), "
+                               f"Orientation(x: {actual_orientation.x}, y: {actual_orientation.y}, z: {actual_orientation.z}, w: {actual_orientation.w})")
+
             goal_position = self.goal_pose.pose.position
             goal_orientation = self.goal_pose.pose.orientation
 
@@ -128,6 +138,9 @@ class PoseErrorCalculator(Node):
                 (goal_euler[1] - actual_euler[1]) ** 2 +
                 (goal_euler[2] - actual_euler[2]) ** 2)
 
+            self.positional_errors.append(positional_error)
+            self.orientation_errors.append(orientation_error)
+
             self.get_logger().info(f'Positional Error: {positional_error:.4f}, Orientation Error: {orientation_error:.4f}')
 
         except Exception as e:
@@ -137,6 +150,22 @@ class PoseErrorCalculator(Node):
         feedback = feedback_msg.feedback
         # Assuming feedback includes the current pose, you can log it or perform other operations
         # self.get_logger().info(f"Current Pose: {feedback.current_pose}")
+
+    def log_error_statistics(self):
+        if not self.positional_errors or not self.orientation_errors:
+            self.get_logger().info("No errors to calculate statistics from.")
+            return
+
+        avg_positional_error = sum(self.positional_errors) / len(self.positional_errors)
+        min_positional_error = min(self.positional_errors)
+        max_positional_error = max(self.positional_errors)
+
+        avg_orientation_error = sum(self.orientation_errors) / len(self.orientation_errors)
+        min_orientation_error = min(self.orientation_errors)
+        max_orientation_error = max(self.orientation_errors)
+
+        self.get_logger().info(f"Positional Error - Average: {avg_positional_error:.4f}, Minimum: {min_positional_error:.4f}, Maximum: {max_positional_error:.4f}")
+        self.get_logger().info(f"Orientation Error - Average: {avg_orientation_error:.4f}, Minimum: {min_orientation_error:.4f}, Maximum: {max_orientation_error:.4f}")
 
 
 def main(args=None):
