@@ -13,8 +13,29 @@ python3 evaluate.py
 2.humble
 
 source /opt/ros/humble/setup.bash
+#source /home/zuyuan/ros2_ws/install/setup.bash
 export TURTLEBOT3_MODEL=waffle
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
 ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True
 
-python3 evaluate.py
+3.python3 evaluate.py
+
+
+
+**Use the build slam_toolbox:
+source /home/zuyuan/ros2_ws/install/setup.bash
+
+
+
+**if Gazebo not showing up:
+
+In terminal 2:
+
+source /opt/ros/humble/setup.bash
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models
+gzclient
+
+$$ kill gzserver
+top
+# get the PID of gzserver
+kill -9 10049
