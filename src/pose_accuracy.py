@@ -113,8 +113,6 @@ class PoseComparisonNode(Node):
             
             file_name_custom = f'discrepancy_custom_{self.current_time_str}.txt'
             file_path_custom = os.path.join(self.file_path, file_name_custom)
-            if not os.path.exists(file_path):
-                os.makedirs(file_path)
             with open(file_path_custom, 'a') as file:
                 file.write(f'{timestamp_str}, {discrepancy_custom}\n')
         else:
